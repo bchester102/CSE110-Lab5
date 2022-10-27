@@ -4,7 +4,6 @@ window.addEventListener('DOMContentLoaded', init);
 
 const jsConfetti = new JSConfetti();
 function init() {
-  // TODO
   const selectSound = document.getElementById("horn-select");
   const soundImage = document.querySelector("img");
   const soundFile = document.querySelector("audio");
