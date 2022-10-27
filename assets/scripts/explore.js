@@ -26,7 +26,6 @@ function fillVoiceList() {
 }
 
 function init() {
-  // TODO
   fillVoiceList();
   if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
     speechSynthesis.onvoiceschanged = fillVoiceList;
@@ -41,8 +40,8 @@ function init() {
   submitButton.addEventListener('click', () => {
     const utterance = new SpeechSynthesisUtterance(speechText.value);
     const currentVoice = selectVoice.selectedOptions[0].getAttribute('data-name');
-    for (let i = 0; i < voices.length; i++){
-      if (voices[i].name === currentVoice){
+    for (let i = 0; i < voices.length; i++) {
+      if (voices[i].name === currentVoice) {
         utterance.voice = voices[i];
       }
     }
